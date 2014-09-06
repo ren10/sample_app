@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   def index
     @users = User.paginate(page: params[:page])
   end
-
+  
+  respond_to :html, :json, :xml
   def show
     @user = User.find(params[:id])
   end
