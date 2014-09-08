@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  use_doorkeeper
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   match '/signin',  to: 'sessions#new',         via: 'get'
@@ -8,6 +9,11 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
+
+  #API
+  namespace :api do
+    resources :users
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
