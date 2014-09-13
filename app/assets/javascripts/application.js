@@ -15,3 +15,5 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+//= require fullcalendar_engine/application
+//= require fullcalendar

@@ -7,6 +7,8 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
+    <%= render 'layouts/cal' if yield(:title) == 'Calendar' %> 
+
   </head>
   <body>
     <%= render 'layouts/header' %>

@@ -11,6 +11,8 @@ gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'rabl'
 gem 'doorkeeper'
+gem 'fullcalendar_engine'
+gem 'fullcalendar-rails'
 
 group :development, :test do
   gem 'mysql2', '0.3.16'
